@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "author": "Carlos Diez",
+  "version": "0.1",
+  "short_name": "Focus",
+  "name": "Focus Chrome Extension",
+  "description": "Manage your browser screentime.",
+  "incognito": "split",
+  "icons": {
+    "16": "16x16.png",
+    "48": "48x48.png",
+    "128": "128x128.png"
+  },
+  "browser_action": {
+    "default_popup": "index.html",
+    "default_title": "Open the popup"
+  },
+  "permissions": ["tabs"]
+}
