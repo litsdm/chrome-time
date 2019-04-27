@@ -1,0 +1,30 @@
+.container {
+  align-items: center;
+  border-top: 1px solid #f4f4f4;
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+}
+
+.item {
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  opacity: 0.4;
+  outline: none;
+  transition: 0.3s ease all;
+
+  p {
+    font-size: 10px;
+  }
+
+  &.activeTime {
+    color: #15CDA8;
+    opacity: 1;
+  }
+
+  &.activeBlock {
+    color: rgb(92, 160, 211);
+    opacity: 1;
+  }
+}
