@@ -55,6 +55,12 @@
   width: 302px;
 }
 
+.content {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
 .statsText {
   font-size: 12px;
   font-weight: 600;
@@ -79,4 +85,16 @@
   font-size: 16px;
   margin-top: 12px;
   padding: 6px 24px;
+}
+
+.showAll {
+  align-self: center;
+  border: none;
+  color: #2091f3;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 300;
+  margin-top: 6px;
+  opacity: 1;
+  outline: none;
 }

@@ -28,9 +28,12 @@ const TimeManagementTab = () => (
           Social Media
         </p>
         <p className={styles.row} style={{ backgroundColor: 'rgba(73,190,183, 0.15)', color: '#49beb7' }}>
-          Business 
+          Business
         </p>
       </div>
+      <button type="button" className={styles.showAll}>
+        Show more stats
+      </button>
     </div>
   </div>
 );
