@@ -7,6 +7,7 @@
 .header {
   align-items: center;
   display: flex;
+  height: 151px;
   justify-content: center;
   position: relative;
 }
@@ -21,6 +22,7 @@
   position: absolute;
   top: 36px;
   width: 48px;
+  z-index: 1;
 
   i {
     color: #15CDA8;
@@ -34,6 +36,7 @@
   font-weight: bold;
   margin: 0;
   position: absolute;
+  z-index: 1;
 }
 
 .divider {
@@ -43,22 +46,48 @@
   height: 3px;
   position: absolute;
   width: 114px;
+  z-index: 1;
 }
 
 .halfCircle {
   background-color: #fff;
-  border: 12px solid #efefef;
   border-bottom: 0;
-  border-top-left-radius: 161px;
-  border-top-right-radius: 161px;
-  height: 151px;
+  border-radius: 50%;
+  height: 302px;
+  position: absolute;
+  top: 0;
   width: 302px;
+
+  &:before,
+  &:after {
+    content: '';
+    border-radius: 50%;
+    position: absolute;
+  }
+
+  &:before {
+    background: linear-gradient(to bottom, #fff 0%, #fff 50%, #efefef 50%, #efefef 100%);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: rotate(0);
+  }
+
+  &:after {
+    background-color: #fff;
+    top: 15px;
+    right: 15px;
+    bottom: 15px;
+    left: 15px;
+  }
 }
 
 .content {
   background-color: #fff;
   display: flex;
   flex-direction: column;
+  z-index: 1;
 }
 
 .statsText {
