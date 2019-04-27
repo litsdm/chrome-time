@@ -1,0 +1,82 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 24px;
+}
+
+.header {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.icon {
+  align-items: center;
+  background-color: rgba(21,205,168, 0.15);
+  border-radius: 50%;
+  display: flex;
+  height: 48px;
+  justify-content: center;
+  position: absolute;
+  top: 36px;
+  width: 48px;
+
+  i {
+    color: #15CDA8;
+    font-size: 24px;
+  }
+}
+
+.timeLabel {
+  bottom: 6px;
+  font-size: 36px;
+  font-weight: bold;
+  margin: 0;
+  position: absolute;
+}
+
+.divider {
+  bottom: 0;
+  background-color: #eee;
+  border-radius: 6px;
+  height: 3px;
+  position: absolute;
+  width: 114px;
+}
+
+.halfCircle {
+  background-color: #fff;
+  border: 12px solid #efefef;
+  border-bottom: 0;
+  border-top-left-radius: 161px;
+  border-top-right-radius: 161px;
+  height: 151px;
+  width: 302px;
+}
+
+.statsText {
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 6px;
+  opacity: 0.7;
+  text-align: center;
+}
+
+.list {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 12px;
+  padding-top: 6px;
+}
+
+.row {
+  background-color: rgba(255,89,89, 0.15);
+  border-radius: 24px;
+  color: #ff5959;
+  font-size: 16px;
+  margin-top: 12px;
+  padding: 6px 24px;
+}

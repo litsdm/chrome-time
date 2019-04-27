@@ -1,8 +1,10 @@
 import React from 'react';
 
+import TimeManagementTab from './components/TimeManagementTab';
+
 const App = () => (
   <div>
-    Ready to start
+    <TimeManagementTab />
   </div>
 );
 
