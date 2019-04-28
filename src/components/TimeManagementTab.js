@@ -1,6 +1,8 @@
 import React from 'react';
 import styles from './TimeManagementTab.module.scss';
 
+import HalfCircle from './HalfCircle';
+
 const TimeManagementTab = () => (
   <div className={styles.container}>
     <div className={styles.header}>
@@ -11,7 +13,9 @@ const TimeManagementTab = () => (
         8h 33m
       </p>
       <div className={styles.divider} />
-      <div className={styles.halfCircle}/>
+      <HalfCircle id="halfCircle-3" color="rgb(73, 190, 183)" rotation={180} />
+      <HalfCircle id="halfCircle-2" color="rgb(92, 160, 211)" rotation={162} />
+      <HalfCircle id="halfCircle-1" color="#ff5959" rotation={108} />
     </div>
     <div className={styles.content}>
       <p className={styles.statsText}>

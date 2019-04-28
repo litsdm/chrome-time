@@ -1,0 +1,33 @@
+.halfCircle {
+  background-color: #fff;
+  border-bottom: 0;
+  border-radius: 50%;
+  height: 302px;
+  position: absolute;
+  top: 0;
+  width: 302px;
+
+  &:before,
+  &:after {
+    content: '';
+    border-radius: 50%;
+    position: absolute;
+  }
+
+  &:before {
+    background: linear-gradient(to bottom, #fff 0%, #fff 50%, #efefef 50%, #efefef 100%);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: rotate(0);
+  }
+
+  &:after {
+    background-color: #fff;
+    top: 15px;
+    right: 15px;
+    bottom: 15px;
+    left: 15px;
+  }
+}
