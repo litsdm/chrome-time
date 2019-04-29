@@ -6,7 +6,7 @@ const HalfCircle = ({ color, rotation, backgroundColor, style, id }) => {
   useEffect(() => {
     const background = `linear-gradient(to bottom, ${backgroundColor} 0%, ${backgroundColor} 50%, ${color} 50%, ${color} 100%)`;
     document.getElementById(id).pseudoStyle('before', 'background', background);
-  });
+  }, []);
 
   return (
     <div
