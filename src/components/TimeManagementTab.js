@@ -3,6 +3,8 @@ import uuid from 'uuid/v4';
 import { arrayOf, number, shape, string } from 'prop-types';
 import styles from './TimeManagementTab.module.scss';
 
+import { formatTime } from '../helpers/time';
+
 import HalfCircle from './HalfCircle';
 
 const MAX_ROTATION = 180;
@@ -20,7 +22,7 @@ const TimeManagementTab = ({ timeData, totalTime }) => {
         handleListeners(i, element, 'removeEventListener');
       }
     }
-  }, []);
+  }, [timeData]);
 
   const handleListeners = (index, element, listenerFunction) => {
     const circleId = `halfCircle-${timeData.length - index - 1}`;
@@ -58,11 +60,18 @@ const TimeManagementTab = ({ timeData, totalTime }) => {
     const elements = [];
 
     for(let i = 0; i < 3; i += 1) {
-      const { category: { name, color } } = reverseTimeData[i];
+      const { category: { name, color }, time } = reverseTimeData[i];
+      const percentage = time / totalTime * 100;
       elements.push((
-        <p id={`category-${i}`} key={uuid()} className={styles.row} style={{ backgroundColor: `rgba(${getRGBValues(color)}, 0.15)`, color }}>
-          {name}
-        </p>
+        <div id={`category-${i}`} key={uuid()} className={styles.row} style={{ backgroundColor: `rgba(${getRGBValues(color)}, 0.15)`, color }}>
+          <p>
+            {name}
+          </p>
+          <p className={styles.details}>
+            Spent {formatTime(time)} - {percentage}%
+          </p>
+        </div>
+
       ))
     }
 
@@ -76,7 +85,7 @@ const TimeManagementTab = ({ timeData, totalTime }) => {
           <i className="fas fa-stopwatch"/>
         </div>
         <p className={styles.timeLabel}>
-          8h 33m
+          {formatTime(totalTime)}
         </p>
         <div className={styles.divider} />
         {renderCircles()}
